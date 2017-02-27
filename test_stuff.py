@@ -6,11 +6,11 @@ class TestStuff(unittest.TestCase):
     def setUp(self):
         self.a = 3
         self.b = 4
-        self.aplusb = a + b
-        self.aminusb = a - b
-        self.atimesb = a * b
-        self.adividedbyb = a / b
-        self.amodulusb = a % b
+        self.aplusb = self.a +self.b
+        self.aminusb = self.a - self.b
+        self.atimesb = self.a * self.b
+        self.adividedbyb = self.a / self.b
+        self.amodulusb = self.a % self.b
 
     def tearDown(self):
         pass
@@ -20,3 +20,7 @@ class TestStuff(unittest.TestCase):
 
     def test_sub(self):
         self.assertEqual(sub(self.a, self.b), self.aminusb)
+
+
+if __name__ == "__main__":
+    unittest.main()

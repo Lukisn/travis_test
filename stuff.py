@@ -14,5 +14,5 @@ def div(a, b):
 def mod(a, b):
     return a % b
 
-def function(a, b, op=plus):
+def function(a, b, op=add):
     return op(a, b)
