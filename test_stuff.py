@@ -13,9 +13,6 @@ class TestStuff(unittest.TestCase):
         self.adividedbyb = self.a / self.b
         self.amodulusb = self.a % self.b
 
-    def tearDown(self):
-        pass
-
     def test_add(self):
         self.assertEqual(add(self.a, self.b), self.aplusb)
 
@@ -31,6 +28,12 @@ class TestStuff(unittest.TestCase):
     def test_mod(self):
         self.assertEqual(mod(self.a, self.b), self.amodulusb)
 
+    def test_function(self):
+        self.assertEqual(function(self.a, self.b, add), self.aplusb)
+        self.assertEqual(function(self.a, self.b, sub), self.aminusb)
+        self.assertEqual(function(self.a, self.b, mul), self.atimesb)
+        self.assertEqual(function(self.a, self.b, div), self.adividedbyb)
+        self.assertEqual(function(self.a, self.b, mod), self.amodulusb)
 
 if __name__ == "__main__":
     unittest.main()
